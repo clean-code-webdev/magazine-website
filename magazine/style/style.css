@@ -1,0 +1,886 @@
+/* ----- */
+/* ----- */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ----- */
+#source-code {
+  width: 4rem;
+  min-height: 4rem;
+  position: fixed;
+  top: 10rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  padding: 0rem 1rem 0rem 0.8rem;
+  border-radius: 1rem;
+}
+
+#source-code a i {
+  font-size: 3rem;
+  margin: 2rem 0;
+  color: yellow;
+}
+
+#source-code a i img {
+  width: 2.5rem;
+  margin: 2rem 0rem 2rem 0;
+}
+
+#source-code a #css-icon {
+  font-size: 2.5rem;
+}
+
+/* ----- */
+/* ----- */
+#navigation {
+  width: 30rem;
+  height: 100%;
+  background: rgba(27, 27, 27, 0.95);
+  position: fixed;
+  top: 0;
+  right: -30rem;
+  padding: 1rem 2rem;
+  z-index: 99999;
+}
+
+#navigation #close-icon {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  right: 2rem;
+  top: 3rem;
+  cursor: pointer;
+}
+
+#navigation ul {
+  width: 80%;
+  margin: 0 auto 3rem;
+}
+
+#navigation ul li {
+  list-style: none;
+  font-size: 2rem;
+  padding: 1rem 0;
+  text-transform: capitalize;
+}
+
+#navigation ul li a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+#navigation ul li a:hover {
+  color: yellow;
+}
+
+#navigation p {
+  width: 90%;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  margin: 0 auto 3rem;
+}
+
+#navigation p i {
+  color: #FF558E;
+  font-size: 1.5rem;
+}
+
+#navigation p i:first-child {
+  padding-right: 1rem;
+}
+
+#navigation p i:last-child {
+  padding-left: 1rem;
+}
+
+#navigation #social {
+  text-align: center;
+}
+
+#navigation #social a {
+  text-decoration: none;
+}
+
+#navigation #social i {
+  padding: 1rem;
+  font-size: 2.5rem;
+  color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#navigation #social i:hover {
+  text-shadow: 0.2rem 0.2rem 0.5rem #FF558E;
+  color: yellow;
+}
+
+#navigation table tr td {
+  color: white;
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+
+#navigation table tr td i {
+  color: #FF558E;
+}
+
+#navigation table tr td:nth-child(odd) {
+  padding-right: 1rem;
+}
+
+.hide-menu {
+  -webkit-animation: hide 1s forwards ease;
+          animation: hide 1s forwards ease;
+}
+
+@-webkit-keyframes hide {
+  from {
+    right: 0;
+  }
+  to {
+    right: -30rem;
+  }
+}
+
+@keyframes hide {
+  from {
+    right: 0;
+  }
+  to {
+    right: -30rem;
+  }
+}
+
+.show-menu {
+  -webkit-animation: show 1s forwards ease;
+          animation: show 1s forwards ease;
+}
+
+@-webkit-keyframes show {
+  from {
+    right: -30rem;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes show {
+  from {
+    right: -30rem;
+  }
+  to {
+    right: 0;
+  }
+}
+
+/* ----- */
+#logo {
+  font-size: 1.8rem;
+  padding: 0;
+  position: absolute;
+  top: 3rem;
+  left: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#icon-open {
+  position: fixed;
+  top: 3rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* ----- */
+#wrapper {
+  width: 98%;
+  min-height: 10rem;
+  margin: 0 2.5%;
+  padding-top: 10rem;
+}
+
+/* ----- */
+#wrapper .container-left,
+#wrapper .container-right {
+  width: 98%;
+  min-height: 10rem;
+  float: left;
+  margin: 0 1%;
+}
+
+#wrapper .container-left:nth-child(odd),
+#wrapper .container-right:nth-child(odd) {
+  margin: 0 2% 0 0;
+}
+
+/* ----- */
+#wrapper .container-left .container,
+#wrapper .container-right .container {
+  padding-bottom: 5rem;
+  float: left;
+}
+
+#wrapper .container-left .container h1,
+#wrapper .container-right .container h1 {
+  font-size: 6rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+#wrapper .container-left .container h2,
+#wrapper .container-right .container h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+}
+
+#wrapper .container-left .container .divider,
+#wrapper .container-right .container .divider {
+  width: 10rem;
+  height: 0.4rem;
+  background: #FF558E;
+}
+
+#wrapper .container-left .container h3,
+#wrapper .container-right .container h3 {
+  font-size: 2rem;
+  padding: 3rem 0;
+}
+
+#wrapper .container-left .container h4,
+#wrapper .container-right .container h4 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+#wrapper .container-left .container p,
+#wrapper .container-right .container p {
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+#wrapper .container-left .container img,
+#wrapper .container-right .container img {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+/* ----- */
+#wrapper .container-left .container .works,
+#wrapper .container-left .container .team,
+#wrapper .container-right .container .works,
+#wrapper .container-right .container .team {
+  width: 50%;
+  height: 25rem;
+  float: left;
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+
+#wrapper .container-left .container .works a,
+#wrapper .container-left .container .team a,
+#wrapper .container-right .container .works a,
+#wrapper .container-right .container .team a {
+  text-decoration: none;
+}
+
+#wrapper .container-left .container .works img,
+#wrapper .container-left .container .team img,
+#wrapper .container-right .container .works img,
+#wrapper .container-right .container .team img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#wrapper .container-left .container .works p,
+#wrapper .container-left .container .team p,
+#wrapper .container-right .container .works p,
+#wrapper .container-right .container .team p {
+  display: none;
+}
+
+#wrapper .container-left .container .team-member,
+#wrapper .container-right .container .team-member {
+  color: white;
+  position: relative;
+  top: -3.4rem;
+  font-size: 2rem;
+  text-align: center;
+  background: black;
+  line-height: 3rem;
+  font-weight: 400;
+  text-shadow: 0.1rem 0.1rem 0.1rem black;
+}
+
+/* ----- */
+#wrapper {
+  /* ----- */
+  /* ----- */
+  /* ----- */
+}
+
+#wrapper .container-left .container .table-holder,
+#wrapper .container-right .container .table-holder {
+  width: 100%;
+  float: left;
+}
+
+#wrapper .container-left .container table,
+#wrapper .container-right .container table {
+  width: 100%;
+  margin-bottom: 3rem;
+  float: left;
+}
+
+#wrapper .container-left .container table tr td,
+#wrapper .container-right .container table tr td {
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+}
+
+#wrapper .container-left .container table tr td:first-child,
+#wrapper .container-right .container table tr td:first-child {
+  text-align: center;
+  color: #FF558E;
+}
+
+#wrapper .container-left .container .basic-table tr td:first-child,
+#wrapper .container-right .container .basic-table tr td:first-child {
+  text-align: left;
+  color: black;
+  width: 45%;
+  text-transform: capitalize;
+}
+
+#wrapper .container-left .container #contact-link,
+#wrapper .container-right .container #contact-link {
+  width: 12rem;
+  background-color: #ed3330;
+  padding: 2rem 0;
+  border-radius: 0.5rem;
+  text-align: center;
+  margin: 0 auto 3rem;
+}
+
+#wrapper .container-left .container #contact-link a,
+#wrapper .container-right .container #contact-link a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+#wrapper .container-left .container #social,
+#wrapper .container-right .container #social {
+  margin-bottom: 2rem;
+}
+
+#wrapper .container-left .container #social p,
+#wrapper .container-right .container #social p {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+#wrapper .container-left .container #social p a,
+#wrapper .container-right .container #social p a {
+  text-decoration: none;
+  color: yellow;
+  text-shadow: 0.2rem 0.2rem 0.9rem black;
+}
+
+#wrapper .container-left .container #social p a i,
+#wrapper .container-right .container #social p a i {
+  padding: 1rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+#wrapper #message-box {
+  width: 99%;
+  height: 99%;
+  position: fixed;
+  top: -100%;
+  left: 0.5%;
+}
+
+#wrapper #message-box i {
+  color: white;
+  font-size: 3rem;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  cursor: pointer;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+#wrapper #message-box i:hover {
+  color: yellow;
+}
+
+#wrapper #message-box form {
+  height: 80%;
+  width: 90%;
+  margin: 20% 5% 0;
+  padding: 2rem 1rem;
+}
+
+#wrapper #message-box form input,
+#wrapper #message-box form textarea {
+  color: white;
+  background: transparent;
+  border: 0;
+  border-bottom: 0.1rem solid yellow;
+  width: 100%;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+}
+
+#wrapper #message-box form input::-webkit-input-placeholder,
+#wrapper #message-box form textarea::-webkit-input-placeholder {
+  color: white;
+}
+
+#wrapper #message-box form input:-ms-input-placeholder,
+#wrapper #message-box form textarea:-ms-input-placeholder {
+  color: white;
+}
+
+#wrapper #message-box form input::-ms-input-placeholder,
+#wrapper #message-box form textarea::-ms-input-placeholder {
+  color: white;
+}
+
+#wrapper #message-box form input::placeholder,
+#wrapper #message-box form textarea::placeholder {
+  color: white;
+}
+
+#wrapper #message-box form textarea {
+  resize: vertical;
+  height: 15rem;
+  max-height: 30rem;
+}
+
+#wrapper #message-box form button {
+  width: 10rem;
+  padding: 1rem 0;
+  text-align: center;
+  background: #ed3330;
+  border: 0;
+  border-radius: 0.5rem;
+  margin: 2rem calc(50% - 5rem) 0;
+  color: white;
+  letter-spacing: 0.1rem;
+}
+
+#wrapper .show-message-box {
+  -webkit-animation: showMessageBox 0.7s forwards ease;
+          animation: showMessageBox 0.7s forwards ease;
+}
+
+@-webkit-keyframes showMessageBox {
+  from {
+    top: -100%;
+    background: rgba(27, 27, 27, 0);
+  }
+  to {
+    top: 0.5%;
+    background: rgba(27, 27, 27, 0.99);
+  }
+}
+
+@keyframes showMessageBox {
+  from {
+    top: -100%;
+    background: rgba(27, 27, 27, 0);
+  }
+  to {
+    top: 0.5%;
+    background: rgba(27, 27, 27, 0.99);
+  }
+}
+
+#wrapper .hide-message-box {
+  -webkit-animation: hideMessageBox 0.7s forwards ease;
+          animation: hideMessageBox 0.7s forwards ease;
+}
+
+@-webkit-keyframes hideMessageBox {
+  from {
+    top: 0.5%;
+    background: rgba(27, 27, 27, 0.95);
+  }
+  to {
+    top: -100%;
+    background: rgba(27, 27, 27, 0);
+  }
+}
+
+@keyframes hideMessageBox {
+  from {
+    top: 0.5%;
+    background: rgba(27, 27, 27, 0.95);
+  }
+  to {
+    top: -100%;
+    background: rgba(27, 27, 27, 0);
+  }
+}
+
+/* ----- */
+#wrapper #team-member-display {
+  width: 98%;
+  height: 98%;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  left: 1%;
+  top: 1%;
+  display: none;
+}
+
+#wrapper #team-member-display #team-member-display-close-icon {
+  font-size: 3rem;
+  color: white;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#wrapper #team-member-display #team-member-display-close-icon:hover {
+  color: yellow;
+}
+
+#wrapper #team-member-display img {
+  width: 80%;
+  height: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  float: left;
+  margin: 3rem 10%;
+}
+
+#wrapper #team-member-display h2 {
+  color: yellow;
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 0.3rem;
+}
+
+#wrapper #team-member-display #member-info {
+  color: white;
+  width: 100%;
+  height: 40%;
+  position: absolute;
+  top: 57%;
+  right: 5%;
+  padding: 0 4rem;
+  float: left;
+  display: block;
+  font-size: 1.8rem;
+}
+
+#wrapper #team-member-display #member-info p {
+  color: white;
+  padding: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+
+#wrapper #team-member-display #member-info p:nth-child(odd) {
+  width: 50%;
+  float: left;
+}
+
+#wrapper #team-member-display #member-info p:nth-child(even) {
+  width: 50%;
+  float: left;
+}
+
+/* ----- */
+@media (min-width: 768px) {
+  #wrapper {
+    width: 98%;
+    margin: 0 1%;
+  }
+  /* ----- */
+  #wrapper .container-left,
+  #wrapper .container-right {
+    width: 48%;
+    min-height: 10rem;
+    float: left;
+    margin: 0 0 0 2%;
+  }
+  #wrapper .container-left:nth-child(odd),
+  #wrapper .container-right:nth-child(odd) {
+    margin: 0 2% 0 0;
+  }
+  #wrapper .container-left .table-holder,
+  #wrapper .container-right .table-holder {
+    width: 100%;
+  }
+  /* ----- */
+  #wrapper .container-left .container .works,
+  #wrapper .container-left .container .team,
+  #wrapper .container-right .container .works,
+  #wrapper .container-right .container .team {
+    padding: 2rem;
+  }
+  #wrapper .container-left .container .works .team-member,
+  #wrapper .container-left .container .team .team-member,
+  #wrapper .container-right .container .works .team-member,
+  #wrapper .container-right .container .team .team-member {
+    font-size: 1.8rem;
+  }
+  #wrapper {
+    /* ----- */
+  }
+  #wrapper #message-box form input,
+  #wrapper #message-box form textarea {
+    font-size: 2rem;
+  }
+  #wrapper #message-box form textarea {
+    height: 20rem;
+    max-height: 50rem;
+  }
+  #wrapper #message-box form button {
+    letter-spacing: 0.2rem;
+  }
+  /* ----- */
+  #wrapper #team-member-display {
+    width: 95%;
+    height: 95%;
+    left: 2.5%;
+    top: 2.5%;
+  }
+  #wrapper #team-member-display #team-member-display-close-icon {
+    font-size: 4rem;
+    top: 3rem;
+    right: 3rem;
+  }
+  #wrapper #team-member-display img {
+    width: 50%;
+    margin: 3rem 25%;
+  }
+  #wrapper #team-member-display h2 {
+    font-size: 4.5rem;
+  }
+  #wrapper #team-member-display #member-info {
+    width: 70%;
+    right: 10%;
+    font-size: 2.5rem;
+  }
+  #wrapper #team-member-display #member-info p {
+    padding: 0.5rem 0;
+  }
+}
+
+/* ----- */
+@media (min-width: 992px) {
+  #wrapper {
+    width: 60%;
+    margin: 0 20%;
+  }
+  /* ----- */
+  #wrapper .container-left .container .works,
+  #wrapper .container-left .container .team,
+  #wrapper .container-right .container .works,
+  #wrapper .container-right .container .team {
+    height: 30rem;
+  }
+  #wrapper .container-left .container .works table,
+  #wrapper .container-left .container .team table,
+  #wrapper .container-right .container .works table,
+  #wrapper .container-right .container .team table {
+    width: 10%;
+    height: 10%;
+    opacity: 0;
+    position: relative;
+    top: -125%;
+    z-index: -20;
+  }
+  #wrapper .container-left .container .works table tr td,
+  #wrapper .container-left .container .team table tr td,
+  #wrapper .container-right .container .works table tr td,
+  #wrapper .container-right .container .team table tr td {
+    font-size: 0.1rem;
+  }
+  #wrapper .container-left .container .team-member-box,
+  #wrapper .container-right .container .team-member-box {
+    cursor: pointer;
+  }
+  #wrapper .container-left .container .table-holder,
+  #wrapper .container-right .container .table-holder {
+    width: 50%;
+  }
+  /* ----- */
+  #wrapper .container-left .container,
+  #wrapper .container-right .container {
+    /* ----- */
+  }
+  #wrapper .container-left .container #contact-link,
+  #wrapper .container-right .container #contact-link {
+    cursor: pointer;
+    -webkit-animation: srhinks 0.4s forwards ease;
+            animation: srhinks 0.4s forwards ease;
+  }
+  @-webkit-keyframes srhinks {
+    from {
+      width: 13.5rem;
+      letter-spacing: 0.1rem;
+      background: #434343;
+      -webkit-box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+              box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+    }
+    to {
+      width: 12rem;
+      background-color: #ed3330;
+    }
+  }
+  @keyframes srhinks {
+    from {
+      width: 13.5rem;
+      letter-spacing: 0.1rem;
+      background: #434343;
+      -webkit-box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+              box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+    }
+    to {
+      width: 12rem;
+      background-color: #ed3330;
+    }
+  }
+  #wrapper .container-left .container #contact-link:hover,
+  #wrapper .container-right .container #contact-link:hover {
+    -webkit-animation: grows 0.4s forwards ease;
+            animation: grows 0.4s forwards ease;
+  }
+  @-webkit-keyframes grows {
+    from {
+      width: 12rem;
+    }
+    to {
+      width: 13.5rem;
+      letter-spacing: 0.1rem;
+      background: #434343;
+      -webkit-box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+              box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+    }
+  }
+  @keyframes grows {
+    from {
+      width: 12rem;
+    }
+    to {
+      width: 13.5rem;
+      letter-spacing: 0.1rem;
+      background: #434343;
+      -webkit-box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+              box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+    }
+  }
+  #wrapper .container-left .container #social p a i,
+  #wrapper .container-right .container #social p a i {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  #wrapper .container-left .container #social p a i:hover,
+  #wrapper .container-right .container #social p a i:hover {
+    color: #FF558E;
+    text-shadow: 0.2rem 0.2rem 0.9rem black;
+  }
+  #wrapper {
+    /* ----- */
+  }
+  #wrapper #message-box form {
+    width: 70%;
+    margin: 5% 15%;
+  }
+  #wrapper #message-box form textarea {
+    max-height: 30rem;
+  }
+  #wrapper #message-box form button {
+    cursor: pointer;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  #wrapper #message-box form button:hover {
+    background: #b1211f;
+    color: white;
+    -webkit-transform: scaleX(1.2);
+            transform: scaleX(1.2);
+  }
+  #wrapper #team-member-display {
+    width: 90%;
+    height: 90%;
+    left: 5%;
+    top: 5%;
+  }
+  #wrapper #team-member-display #team-member-display-close-icon {
+    top: 2rem;
+    right: 3rem;
+    cursor: pointer;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  #wrapper #team-member-display #team-member-display-close-icon:hover {
+    color: yellow;
+  }
+  #wrapper #team-member-display img {
+    width: 30%;
+    height: 75%;
+    position: fixed;
+    left: -15%;
+  }
+  #wrapper #team-member-display h2 {
+    text-align: left;
+    width: 50%;
+    padding-left: 2rem;
+    position: absolute;
+    top: 7.5%;
+    right: 5%;
+  }
+  #wrapper #team-member-display #member-info {
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    padding: 0 2rem;
+    font-size: 3rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
